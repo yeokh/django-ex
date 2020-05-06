@@ -11,6 +11,8 @@ from .models import PageView
 def index(request):
     hostname = os.getenv('HOSTNAME', 'unknown')
     PageView.objects.create(hostname=hostname)
+    
+    print("MHA Demo Request Index Page")
 
     return render(request, 'welcome/index.html', {
         'hostname': hostname,
