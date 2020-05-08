@@ -12,7 +12,7 @@ def index(request):
     hostname = os.getenv('HOSTNAME', 'unknown')
     PageView.objects.create(hostname=hostname)
     
-    print("MHA Demo Request Index Page")
+    print("REDHAT DEMO Log index page request message")
 
     return render(request, 'welcome/index.html', {
         'hostname': hostname,
